@@ -1,0 +1,20 @@
+<article>
+  <header>
+    <h1><%= @student.first_name %> <%= @student.last_name %></h1>
+  </header>
+  <h2>Details</h2>
+  <h3>Triennial Year?</h3>
+  <p>
+    <%= @student.triennial %>
+  </p>
+  <h3>IEP Date</h3>
+  <p>
+    <%= @student.iep_date %>
+  </p>
+  <h3>IEP Services Remaining</h3>
+  <p>
+    <%= @student.min_hours %>
+  </p>
+</article>
+
+<%= link_to 'All students', students_path %>
