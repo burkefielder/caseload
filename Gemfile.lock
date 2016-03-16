@@ -434,7 +434,7 @@ DEPENDENCIES
   binding_of_caller
   bullet
   bundler (~> 1.11)
-  byebug
+  byebug (~> 8.2, >= 8.2.2)
   capybara (= 2.6.2)
   capybara-angular (= 0.1.1)
   capybara-screenshot

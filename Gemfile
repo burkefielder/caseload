@@ -60,7 +60,7 @@ end
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'byebug'
+  gem 'byebug', '~> 8.2', '>= 8.2.2'
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '>= 3.4.1'
