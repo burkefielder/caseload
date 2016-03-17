@@ -1,0 +1,17 @@
+<h1>Edit <%= @student.first_name %> <%= @student.last_name%></h1>
+
+<%= form_for(@student) do |f| %>
+  <p>
+    <%= f.label :first_name %><br/>
+    <%= f.text_field :first_name %><br/>
+    <%= f.label :last_name %><br/>
+    <%= f.text_field :last_name %><br/>
+    <%= f.check_box :triennial %>
+    <%= label_tag(:triennial, 'Triennial due this year?') %><br/>
+    <%= f.label :iep_date %><br/>
+    <%= f.date_field :iep_date %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
