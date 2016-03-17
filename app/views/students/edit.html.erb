@@ -9,7 +9,9 @@
     <%= f.check_box :triennial %>
     <%= label_tag(:triennial, 'Triennial due this year?') %><br/>
     <%= f.label :iep_date %><br/>
-    <%= f.date_field :iep_date %>
+    <%= f.date_field :iep_date %><br/>
+    <%= label_tag(:min_hours, 'IEP Minutes') %><br/>
+    <%= f.number_field :min_hours %>
   </p>
   <p>
     <%= f.submit %>

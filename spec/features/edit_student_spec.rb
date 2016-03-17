@@ -9,8 +9,8 @@ describe 'Editing an individual student' do
 
     expect(page).to have_text(student.first_name)
     expect(page).to have_text(student.last_name)
+    expect(page).to have_text('Triennial due')
     expect(page).to have_text('Iep date')
-    expect(student.triennial).to eq true
-    expect(student.min_hours).to eq 15.0
+    expect(page).to have_text('Min hours')
   end
 end
