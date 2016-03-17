@@ -11,6 +11,6 @@ describe 'Editing an individual student' do
     expect(page).to have_text(student.last_name)
     expect(page).to have_text('Triennial due')
     expect(page).to have_text('Iep date')
-    expect(page).to have_text('Min hours')
+    expect(page).to have_text('IEP Minutes')
   end
 end
