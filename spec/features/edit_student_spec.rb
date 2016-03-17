@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Editing an individual student' do
-
   it 'updates the student details and shows the updated details' do
     student = Student.create(student_attributes)
 

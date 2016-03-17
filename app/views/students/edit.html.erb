@@ -4,12 +4,20 @@
   <p>
     <%= f.label :first_name %><br/>
     <%= f.text_field :first_name %><br/>
+  </p>
+  <p>
     <%= f.label :last_name %><br/>
     <%= f.text_field :last_name %><br/>
+  </p>
+  <p>
     <%= f.check_box :triennial %>
     <%= label_tag(:triennial, 'Triennial due this year?') %><br/>
+  </p>
+  <p>
     <%= f.label :iep_date %><br/>
     <%= f.date_field :iep_date %><br/>
+  </p>
+  <p>
     <%= label_tag(:min_hours, 'IEP Minutes') %><br/>
     <%= f.number_field :min_hours %>
   </p>
