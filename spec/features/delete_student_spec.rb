@@ -5,9 +5,9 @@ describe 'Deleting a student' do
     without the deleted student' do
     student = Student.create(student_attributes)
 
-    visit students_path(student)
+    visit student_path(student)
 
-    click_link 'Delete'
+    click_link 'Delete Student'
 
     expect(current_path).to eq(students_path)
     expect(page).not_to have_text(student.first_name)
