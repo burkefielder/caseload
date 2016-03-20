@@ -3,6 +3,14 @@
     <h1><%= @student.first_name %> <%= @student.last_name %></h1>
   </header>
   <h2>Details</h2>
+  <h3>Age</h3>
+  <p>
+    <%= @student.age %>
+  </p>
+  <h3>Grade</h3>
+  <p>
+    <%= @student.grade %>
+  </p>
   <h3>Triennial Year?</h3>
   <p>
     <%= @student.triennial %>
@@ -14,6 +22,14 @@
   <h3>IEP Services Remaining</h3>
   <p>
     <%= @student.min_hours %>
+  </p>
+  <h3>Diagnosis</h3>
+  <p>
+    <%= @student.diagnosis %>
+  </p>
+  <h3>Dismissed?</h3>
+  <p>
+    <%= @student.dismissed %>
   </p>
 </article>
 
