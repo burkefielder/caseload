@@ -8,6 +8,6 @@ def student_attributes(overrides = {})
     age:        '2010-01-01',
     grade:       1,
     diagnosis:  'social language',
-    dismissed:   false
+    dismissed:   true
   }.merge(overrides)
 end
