@@ -1,0 +1,18 @@
+<header id='content-header'>
+  <h1>Session notes for <%= link_to(@student.fullname, @student) %></h1>
+</header>
+<ol>
+  <% @session.each do |session| %>
+    <li>
+      <p>
+        <%= session.date %>
+      </p>
+      <p>
+        <%= session.minutes %> minutes
+      </p>
+      <p>
+        <%= session.notes %>
+      </p>
+    </li>
+  <% end %>
+</ol>

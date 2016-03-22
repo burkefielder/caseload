@@ -39,9 +39,13 @@ class StudentsController < ApplicationController
     params.require(:student).permit(
       :first_name,
       :last_name,
+      :age,
+      :grade,
       :triennial,
       :iep_date,
-      :min_hours
+      :min_hours,
+      :diagnosis,
+      :dismissed
     )
   end
 end

@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  has_many :sessions
+  has_many :sessions, dependent: :destroy
 
   def fullname
     @fullname = "#{first_name} #{last_name}"
