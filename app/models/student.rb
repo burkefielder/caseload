@@ -1,4 +1,6 @@
 class Student < ActiveRecord::Base
+  has_many :sessions
+
   def fullname
     @fullname = "#{first_name} #{last_name}"
   end

@@ -14,9 +14,9 @@ end
 
 def session_attributes(overrides = {})
   {
-    date: DateTime.now,
+    date: '2016-03-01',
     minutes: 30,
-    note: 'Billy was totally uncooperative.',
+    notes: 'Billy was totally uncooperative.',
     therapy: 'traditional artic'
   }.merge(overrides)
 end
