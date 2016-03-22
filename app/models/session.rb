@@ -1,3 +1,4 @@
+# get rid of rubocop error
 class Session < ActiveRecord::Base
   belongs_to :student
 

@@ -1,3 +1,4 @@
+# get rid of rubocop error
 class StudentsController < ApplicationController
   def index
     @students = Student.first_name_asc

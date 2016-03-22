@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Viewing a list of session notes' do
-
   it 'shows the session notes for a specific student' do
     student1 = Student.create(student_attributes(first_name: 'Jimbo'))
     note1 = student1.sessions.create(session_attributes(date: '2016-01-01'))
