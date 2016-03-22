@@ -11,3 +11,12 @@ def student_attributes(overrides = {})
     dismissed:   true
   }.merge(overrides)
 end
+
+def session_attributes(overrides = {})
+  {
+    date: DateTime.now,
+    minutes: 30,
+    note: 'Billy was totally uncooperative.',
+    therapy: 'traditional artic'
+  }.merge(overrides)
+end
