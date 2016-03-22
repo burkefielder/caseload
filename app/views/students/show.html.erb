@@ -33,6 +33,8 @@
   </p>
 </article>
 
+<%= link_to 'Show Therapy Notes', student_sessions_path(@student) %><br/>
+
 <%= link_to 'All students', students_path %> |
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Delete Student', student_path(@student), method: :delete, data: { confirm: 'Are you sure?' } %>
