@@ -1,6 +1,8 @@
 class Student < ActiveRecord::Base
   has_many :sessions, dependent: :destroy
 
+  validates :first_name, :last_name, presence: true
+
   def fullname
     @fullname = "#{first_name} #{last_name}"
   end

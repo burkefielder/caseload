@@ -14,8 +14,12 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
-    @student.update(student_params)
-    redirect_to @student
+    if @student.update(student_params)
+      flash[:notice] = 'Student successfully updated!'
+      redirect_to @student
+    else
+      render :edit
+    end
   end
 
   def new

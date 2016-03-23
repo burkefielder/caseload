@@ -32,5 +32,6 @@ describe 'Editing an individual student' do
 
     expect(current_path).to eq(student_path(student))
     expect(page).to have_text('Smith')
+    expect(page).to have_text('Student successfully updated!')
   end
 end
