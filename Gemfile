@@ -3,12 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.2'
 gem 'responders'
 gem 'rails-observers'
-gem(
-  'active_model_serializers',
-  github: 'rails-api/active_model_serializers',
-  ref:    '48b04'
-)
-
 gem 'angular_rails_csrf'
 gem 'simple_form'
 gem 'haml-rails'
@@ -32,7 +26,6 @@ gem 'adequate_exposure'
 gem 'que'
 gem 'autoprefixer-rails'
 gem 'kaminari'
-gem 'ruby-saml', github: 'onelogin/ruby-saml'
 gem 'axlsx_rails'
 gem 'sequel'
 gem 'tiny_tds', '~> 0.7.0'
