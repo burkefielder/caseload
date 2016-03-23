@@ -1,0 +1,14 @@
+<article>
+  <h1> Session note for <%= link_to(@student.fullname, @student) %></h1>
+  <p>
+    <%= @session.date %>
+  </p>
+  <p>
+    <%= @session.minutes %>
+  </p>
+  <p>
+    <%= @session.notes %>
+  </p>
+</article>
+
+<%= link_to 'Edit', edit_student_session_path %>

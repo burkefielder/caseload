@@ -18,6 +18,6 @@ RSpec.describe Student, type: :model do
 
     expect {
       student.destroy
-    }.to change(Review, :count).by(-1)
+    }.to change(Session, :count).by(-1)
   end
 end

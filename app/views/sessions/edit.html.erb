@@ -1,0 +1,22 @@
+<h1>Edit a Therapy Note for <%= @student.fullname %> </h1>
+
+<%= form_for([@student, @session]) do |f| %>
+  <%= render 'shared/errors', object: @session %>
+  <p>
+    <%= f.label :date %><br/>
+    <%= f.date_field :date, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :minutes %><br/>
+    <%= f.number_field :minutes %>
+  </p>
+  <p>
+    <%= f.label :notes %><br/>
+    <%= f.text_area :notes, cols: 40, placeholder: 'How did the session go?' %>
+  </p>
+  <p>
+    <%= f.submit 'Save Note' %>
+    <%= link_to 'Cancel', student_path(@student) %>
+    <%= link_to 'Delete Note', student_session_path(@student, @session), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>

@@ -54,6 +54,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug', '~> 8.2', '>= 8.2.2'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'i18n-tasks'
   gem 'pry-rails'
   gem 'rspec-rails', '>= 3.4.1'
@@ -81,15 +82,12 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
-group :test, :development do
-  gem 'factory_girl_rails', '~> 4.4.1'
-end
-
 group :test do
   gem 'capybara', '2.6.2'
   gem 'capybara-angular', '0.1.1'
   gem 'capybara-screenshot'
   gem 'capybara-slow_finder_errors'
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner', '~> 1.5'
   gem 'factory_girl', require: false
   gem 'faker', '~> 1.6'

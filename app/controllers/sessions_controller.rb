@@ -21,6 +21,34 @@ class SessionsController < ApplicationController
     end
   end
 
+  def show
+    @student = Student.find(params[:student_id])
+    @session = @student.sessions.find(params[:id])
+  end
+
+  def edit
+    @student = Student.find(params[:student_id])
+    @session = @student.sessions.find(params[:id])
+  end
+
+  def update
+    @student = Student.find(params[:student_id])
+    @session = @student.sessions.find(params[:id])
+    if @session.update(session_params)
+      flash
+      redirect_to student_sessions_path(@student), notice: 'Note successfully updated!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @student = Student.find(params[:student_id])
+    @session = @student.sessions.find(params[:id])
+    @session.destroy
+    redirect_to student_sessions_url
+  end
+
   private
 
   def session_params
