@@ -110,6 +110,7 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'rubocop', require: false
   gem 'selenium-webdriver', '~> 2.53.0'
+  gem 'simplecov', require: false
   gem 'simple_xlsx_reader'
   gem 'shoulda-matchers'
   gem 'timecop'
