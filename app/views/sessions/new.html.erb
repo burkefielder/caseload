@@ -1,25 +1,5 @@
 <h1>Add a Therapy Note for <%= @student.fullname %> </h1>
 
-<%= form_for([@student, @session]) do |f| %>
-  <%= render 'shared/errors', object: @session %>
-  <p>
-    <%= f.label :date %><br/>
-    <%= f.date_field :date, autofocus: true %>
-  </p>
-  <p>
-    <%= f.label :minutes %><br/>
-    <%= f.number_field :minutes %>
-  </p>
-  <p>
-    <%= f.label :therapy %><br/>
-    <%= f.text_field :therapy %>
-  </p>
-  <p>
-    <%= f.label :notes %><br/>
-    <%= f.text_area :notes, cols: 40, placeholder: 'How did the session go?' %>
-  </p>
-  <p>
-    <%= f.submit 'Save Note' %>
-    <%= link_to 'Cancel', student_path(@student) %>
-  </p>
-<% end %>
+<%= render 'form' %>
+
+<%= link_to 'Cancel', student_path(@student) %>

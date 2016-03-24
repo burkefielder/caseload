@@ -1,17 +1,16 @@
 # get rid of rubocop error
 class SessionsController < ApplicationController
+  before_action :set_student
+
   def index
-    @student = Student.find(params[:student_id])
     @session = @student.sessions
   end
 
   def new
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.new
   end
 
   def create
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.new(session_params)
     if @session.save
       flash[:notice] = 'Therapy note successfully added'
@@ -22,17 +21,14 @@ class SessionsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.find(params[:id])
   end
 
   def edit
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.find(params[:id])
   end
 
   def update
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.find(params[:id])
     if @session.update(session_params)
       flash
@@ -43,13 +39,16 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    @student = Student.find(params[:student_id])
     @session = @student.sessions.find(params[:id])
     @session.destroy
     redirect_to student_sessions_url
   end
 
   private
+
+  def set_student
+    @student = Student.find(params[:student_id])
+  end
 
   def session_params
     params.require(:session).permit(
