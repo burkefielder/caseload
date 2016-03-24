@@ -34,4 +34,18 @@ describe 'Editing an individual student' do
     expect(page).to have_text('Smith')
     expect(page).to have_text('Student successfully updated!')
   end
+  it 'returns the user to the edit screen if the information is invalid' do
+    student = Student.create(student_attributes)
+
+    visit student_url(student)
+
+    click_link 'Edit'
+
+    fill_in 'Last name', with: ''
+
+    click_button 'Update Student'
+
+    expect(current_path).to eq(student_path(student))
+    expect(page).to have_text('student could not be saved')
+  end
 end
