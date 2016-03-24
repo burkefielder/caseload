@@ -5,10 +5,14 @@
   <% @session.each do |session| %>
     <li>
       <p>
-        <%= session.date %>
+        <%= link_to session.date, student_session_path(@student, session) %>
       </p>
       <p>
         <%= session.minutes %> minutes
+      </p>
+      <p>
+        Type of therapy: <br/>
+        <%= session.therapy %>
       </p>
       <p>
         <%= session.notes %>
