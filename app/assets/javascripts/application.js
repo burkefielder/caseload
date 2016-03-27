@@ -32,3 +32,5 @@ function sideNav() {
 $(window).resize(function() {
   sideNav();
 });
+
+$(function(){ $(document).foundation(); });
