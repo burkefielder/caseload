@@ -2,9 +2,11 @@
 
 <%= render 'form' %>
 
-<p>
-  <%= link_to 'Cancel', student_sessions_path(@student) %>
-</p>
-<p>
-  <%= link_to 'Delete Note', student_session_path(@student, @session), method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
+<div class='row'>
+  <div class='large-6 columns'>
+    <div class='large-6 columns'>
+      <%= link_to 'Cancel', student_sessions_path(@student), class: 'button small secondary round' %>
+      <%= link_to 'Delete Note', student_session_path(@student, @session), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button alert small round' %>
+    </div>
+  </div>
+</div>

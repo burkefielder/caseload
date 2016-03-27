@@ -1,16 +1,19 @@
 <article>
+      <div class='student-header-wrapper'>
   <header class='row'>
-    <div class='large-12 columns'>
-      <div class='large-8 columns'>
-        <h1><%= @student.first_name %> <%= @student.last_name %></h1>
-      </div>
-      <div class='large-2 columns'>
-        <h5>Triennial?</h5>
-        <%= @student.triennial %>
-      </div>
-      <div class='large-2 columns'>
-        <h5>Dismissed?</h5>
-        <%= @student.dismissed %>
+
+      <div class='large-12 columns'>
+        <div class='large-8 columns'>
+          <h1><%= @student.first_name %> <%= @student.last_name %></h1>
+        </div>
+        <div class='large-2 columns'>
+          <h5>Triennial?</h5>
+          <%= @student.triennial %>
+        </div>
+        <div class='large-2 columns'>
+          <h5>Dismissed?</h5>
+          <%= @student.dismissed %>
+        </div>
       </div>
     </div>
   </header>
@@ -52,7 +55,6 @@
       <li><%= link_to 'Show Therapy Notes', student_sessions_path(@student), class: 'button small' %></li>
     </ul>
     <ul class='button-group round'>
-      <li><%= link_to 'All students', students_path, class: 'button small' %></li>
       <li><%= link_to 'Edit', edit_student_path(@student), class: 'button small' %></li>
     </ul>
   </div>

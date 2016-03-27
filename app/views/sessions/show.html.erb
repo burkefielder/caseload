@@ -1,7 +1,7 @@
 <article>
-  <h1> Session note for <%= link_to(@student.fullname, @student) %></h1>
+  <h1> Session note for <%= @student.fullname %></h1>
   <p>
-    <%= @session.date %>
+    <%= l @session.date, format: :short_date %>
   </p>
   <p>
     <%= @session.minutes %>
@@ -11,5 +11,12 @@
   </p>
 </article>
 
-<%= link_to 'Edit', edit_student_session_path %>
-<%= link_to 'Cancel', student_sessions_path %>
+<div class='show_student_buttons'>
+  <div class='row'>
+    <ul class='button-group round'>
+      <li><%= link_to 'Edit', edit_student_session_path, class: 'button small' %></li>
+      <li><%= link_to 'Notes', student_sessions_path, class: 'button small' %></li>
+      <li><%= link_to 'Student', @student, class: 'button small' %></li>
+    </ul>
+  </div>
+</div>

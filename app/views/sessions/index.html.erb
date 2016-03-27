@@ -1,26 +1,39 @@
 <header id='content-header'>
-  <h1>Session notes for <%= link_to(@student.fullname, @student) %></h1>
+  <h1>Session notes for <%= @student.fullname %></h1>
 </header>
-<ol>
-  <% @session.each do |session| %>
-    <li>
-      <p>
-        <%= link_to session.date, student_session_path(@student, session) %>
-      </p>
-      <p>
-        <%= session.minutes %> minutes
-      </p>
-      <p>
-        Type of therapy: <br/>
-        <%= session.therapy %>
-      </p>
-      <p>
-        <%= session.notes %>
-      </p>
-      <p>
-        <%= link_to 'Edit', edit_student_session_path(@student, session) %>
-      </p>
-    </li>
-    <% end %>
-</ol>
-<%= link_to 'Write Note', new_student_session_path(@student) %>
+
+<div class='row'>
+  <div class='large-12 columns'>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Length</th>
+          <th>Therapy Type</th>
+          <th>Note</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @session.each do |session| %>
+        <tr>
+          <td><%= l session.date, format: :short_date %></td>
+          <td><%= session.minutes %></td>
+          <td><%= session.therapy %></td>
+          <td><%= session.notes %></td>
+          <td><%= link_to 'View Note', student_session_path(@student, session), class: 'button tiny round' %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <div class='show_student_buttons'>
+      <div class='row'>
+        <ul class='button-group round'>
+          <li><%= link_to 'New Note', new_student_session_path(@student), class: 'button small' %></li>
+          <li><%= link_to 'Back to Student', @student, class: 'button small' %>
+        </ul>
+      </div>
+    </div>
