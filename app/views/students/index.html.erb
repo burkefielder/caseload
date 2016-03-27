@@ -1,13 +1,24 @@
 <h1>My Caseload</h1>
 
-<% @students.each do |student| %>
-  <article>
-    <%= link_to 'Edit', student %>
-    <%= student.fullname %>
-    Grade
-    <%= student.grade %>
 
-    IEP Date
-    <%= student.iep_date %>
-  </article>
-<% end %>
+  <table>
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Grade</th>
+        <th>IEP Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+      <tr>
+        <td><%= student.fullname %></td>
+        <td><%= student.grade %></td>
+        <td><%= l student.iep_date, format: :short_date %></td>
+        <td><%= link_to 'Edit', student %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
