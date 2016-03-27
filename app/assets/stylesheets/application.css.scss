@@ -12,6 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation
  //= require foundation_and_overrides
 
  */
+
+
+ button .button .caseload-index {
+   margin-bottom: 0;
+ }

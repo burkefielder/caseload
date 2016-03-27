@@ -1,42 +1,59 @@
 <article>
-  <header>
-    <h1><%= @student.first_name %> <%= @student.last_name %></h1>
+  <header class='row'>
+    <div class='large-12 columns'>
+      <div class='large-8 columns'>
+        <h1><%= @student.first_name %> <%= @student.last_name %></h1>
+      </div>
+      <div class='large-2 columns'>
+        <h5>Triennial?</h5>
+        <%= @student.triennial %>
+      </div>
+      <div class='large-2 columns'>
+        <h5>Dismissed?</h5>
+        <%= @student.dismissed %>
+      </div>
+    </div>
   </header>
-  <h3>Age</h3>
 
-    <%= @student.age %>
-
-  <h3>Grade</h3>
-
-    <%= @student.grade %>
-
-  <h3>Triennial Year?</h3>
-
-    <%= @student.triennial %>
-
-  <h3>IEP Date</h3>
-
-    <%= @student.iep_date %>
-
-  <h3>IEP Services Remaining</h3>
-
-    <%= @student.min_hours %>
-
-  <h3>Diagnosis</h3>
-
-    <%= @student.diagnosis %>
-
-  <h3>Dismissed?</h3>
-
-    <%= @student.dismissed %>
-
+  <div class='row demographics'>
+    <div class='large-12 columns'>
+      <div class='large-3 columns'>
+        <h4>Age</h4>
+        <%= @student.years_old(@student.age) %>
+      </div>
+      <div class='large-3 columns'>
+        <h4>Grade</h4>
+        <%= @student.grade %>
+      </div>
+      <div class='large-3 columns'>
+        <h4>IEP Date</h4>
+        <%= l @student.iep_date, format: :short_date %>
+      </div>
+      <div class='large-3 columns'>
+        <h4>IEP Minutes</h4>
+        <%= @student.min_hours %>
+      </div>
+    </div>
+  </div>
+  <div class='diagnosis'>
+    <div class='row'>
+      <div class='large-12 columns'>
+        <h4>Diagnosis</h4>
+        <%= @student.diagnosis %>
+      </div>
+    </div>
+  </div>
 </article>
 
-<ul class='button-group round'>
-  <li><%= link_to 'Write Note', new_student_session_path(@student), class: 'button small' %></li>
-  <li><%= link_to 'Show Therapy Notes', student_sessions_path(@student), class: 'button small' %></li>
-</ul>
-<ul class='button-group round'>
-  <li><%= link_to 'All students', students_path, class: 'button small' %></li>
-  <li><%= link_to 'Edit', edit_student_path(@student), class: 'button small' %></li>
-</ul>
+<div class='show_student_buttons'>
+  <div class='row'>
+    <ul class='button-group round'>
+      <li><%= link_to 'Write Note', new_student_session_path(@student), class: 'button small' %></li>
+      <li><%= link_to 'Show Therapy Notes', student_sessions_path(@student), class: 'button small' %></li>
+    </ul>
+    <ul class='button-group round'>
+      <li><%= link_to 'All students', students_path, class: 'button small' %></li>
+      <li><%= link_to 'Edit', edit_student_path(@student), class: 'button small' %></li>
+    </ul>
+  </div>
+</div>
