@@ -1,3 +1,11 @@
 <h1>Edit <%= @student.first_name %> <%= @student.last_name%></h1>
 
 <%= render 'form' %>
+
+<div class='row'>
+  <div class='large-6 columns'>
+    <div class='large-6 columns'>
+      <%= link_to 'Delete Student', student_path(@student), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button alert small' %>
+    </div>
+  </div>
+</div>

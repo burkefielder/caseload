@@ -17,7 +17,13 @@
         <td><%= student.fullname %></td>
         <td><%= student.grade %></td>
         <td><%= l student.iep_date, format: :short_date %></td>
-        <td><%= link_to 'Edit', student %></td>
+        <td>
+          <ul class='button-group caseload-index'>
+            <li><%= link_to 'Show Student', student, class: 'button tiny' %></li>
+            <li><%= link_to 'Write Note', new_student_session_path(student), class: 'button tiny' %></li>
+            <li><%= link_to 'Show Therapy Notes', student_sessions_path(student), class: 'button tiny' %></li>
+          </ul>
+        </td>
       </tr>
       <% end %>
     </tbody>

@@ -2,7 +2,6 @@
   <header>
     <h1><%= @student.first_name %> <%= @student.last_name %></h1>
   </header>
-  <h2>Details</h2>
   <h3>Age</h3>
 
     <%= @student.age %>
@@ -30,12 +29,14 @@
   <h3>Dismissed?</h3>
 
     <%= @student.dismissed %>
-  
+
 </article>
 
-<%= link_to 'Write Note', new_student_session_path(@student) %><br/>
-<%= link_to 'Show Therapy Notes', student_sessions_path(@student) %><br/>
-
-<%= link_to 'All students', students_path %> |
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Delete Student', student_path(@student), method: :delete, data: { confirm: 'Are you sure?' } %>
+<ul class='button-group round'>
+  <li><%= link_to 'Write Note', new_student_session_path(@student), class: 'button small' %></li>
+  <li><%= link_to 'Show Therapy Notes', student_sessions_path(@student), class: 'button small' %></li>
+</ul>
+<ul class='button-group round'>
+  <li><%= link_to 'All students', students_path, class: 'button small' %></li>
+  <li><%= link_to 'Edit', edit_student_path(@student), class: 'button small' %></li>
+</ul>

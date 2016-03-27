@@ -35,16 +35,16 @@
         <%= label_tag(:min_hours, 'IEP Minutes') %>
         <%= f.number_field :min_hours %>
 
-        <%= f.check_box :dismissed %>
-        <%= label_tag(:dismissed, 'Dismissed?') %>
+          <%= f.check_box :dismissed %>
+          <%= label_tag(:dismissed, 'Dismissed?') %>
       </div>
     </div>
   </div>
   <div class='row'>
     <div class='large-6 columns'>
       <div class='large-6 columns'>
-        <%= f.submit %>
-        <%= link_to 'Cancel', students_path, method: 'get' %>
+          <%= f.submit class: 'button small' %>
+          <%= link_to 'Cancel', students_path, method: 'get', class: 'button secondary' %>
       </div>
     </div>
   </div>
