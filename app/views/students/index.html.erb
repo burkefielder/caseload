@@ -1,25 +1,13 @@
 <h1>My Caseload</h1>
 
-<%= link_to 'Add Student to Caseload', new_student_path %>
-
 <% @students.each do |student| %>
   <article>
-    <header>
-      <h2><%= link_to student.fullname, student %></h2>
-    </header>
-    <table>
-      <tr>
-        <th>Triennial?</th>
-        <td><%= student.triennial %></td>
-      </tr>
-      <tr>
-        <th>IEP Date</th>
-        <td><%= student.iep_date %></td>
-      </tr>
-      <tr>
-        <th>IEP Hours</th>
-        <td><%= student.min_hours %></td>
-      </tr>
-    </table>
+    <%= link_to 'Edit', student %>
+    <%= student.fullname %>
+    Grade
+    <%= student.grade %>
+
+    IEP Date
+    <%= student.iep_date %>
   </article>
 <% end %>

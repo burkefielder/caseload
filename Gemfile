@@ -29,6 +29,7 @@ gem 'kaminari'
 gem 'axlsx_rails'
 gem 'sequel'
 gem 'tiny_tds', '~> 0.7.0'
+gem 'foundation-rails', '~> 5.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -74,6 +75,7 @@ group :development do
   gem 'rack-mini-profiler'
   gem 'paratrooper'
   gem 'quiet_assets'
+  gem 'rails_layout'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'stackprof'
