@@ -1,7 +1,5 @@
 <%= form_for(@student) do |f| %>
   <%= render 'shared/errors', object: @student %>
-
-
   <div class='row'>
     <div class='large-6 columns'>
       <div class='large-6 columns'>
@@ -35,8 +33,8 @@
         <%= label_tag(:min_hours, 'IEP Minutes') %>
         <%= f.number_field :min_hours %>
 
-          <%= f.check_box :dismissed %>
-          <%= label_tag(:dismissed, 'Dismissed?') %>
+        <%= f.check_box :dismissed %>
+        <%= label_tag(:dismissed, 'Dismissed?') %>
       </div>
     </div>
   </div>
@@ -48,5 +46,4 @@
       </div>
     </div>
   </div>
-
 <% end %>
