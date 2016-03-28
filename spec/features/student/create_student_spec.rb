@@ -27,4 +27,27 @@ describe 'Creating a new student' do
     expect(page).to have_text('1984-05-06')
     expect(page).to have_text('8')
   end
+
+  it 'does not save the student if the data is invalid' do
+    visit students_url
+
+    click_link 'Add Student'
+
+    expect(current_path).to eq(new_student_path)
+
+    fill_in 'First name', with: ''
+    fill_in 'Last name', with: ''
+    check 'student_triennial'
+    fill_in 'student_min_hours', with: '1500'
+    fill_in 'Iep date', with: '1984-05-06'
+    fill_in 'Date of birth', with: '1983-05-30'
+    fill_in 'Grade', with: '8'
+    fill_in 'Diagnosis', with: 'Articulation'
+
+    click_button 'Create Student'
+
+    expect { click_button 'Create Student' }.not_to change(Session, :count)
+
+    expect(page).to have_text('could not be saved')
+  end
 end

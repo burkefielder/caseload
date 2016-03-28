@@ -28,6 +28,6 @@ describe 'Creating a new therapy session' do
 
     expect { click_button 'Save Note' }.not_to change(Session, :count)
 
-    expect(page).to have_text('error')
+    expect(page).to have_text('could not be saved')
   end
 end

@@ -28,8 +28,13 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
-    @student.save
-    redirect_to @student
+    if @student.save
+      flash
+      redirect_to @student, notice: 'Student successfully added.'
+    else
+      flash
+      render :new
+    end
   end
 
   def destroy
