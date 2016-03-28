@@ -9,7 +9,7 @@ describe 'Viewing an individual session note' do
 
     expect(page).to have_text(student.first_name)
     expect(page).to have_text(student.last_name)
-    expect(page).to have_text(session.date)
+    expect(page).to have_text(session.date.strftime('%F'))
     expect(page).to have_text(session.minutes)
     expect(page).to have_text(session.notes)
     expect(page).to have_text(session.therapy)

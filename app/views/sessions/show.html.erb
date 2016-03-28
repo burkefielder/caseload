@@ -1,12 +1,12 @@
 <article>
   <h1> Session note for <%= @student.fullname %></h1>
-  <p>
+  <p>Date:
     <%= l @session.date, format: :short_date %>
   </p>
-  <p>
+  <p>Minutes:
     <%= @session.minutes %>
   </p>
-  <p>
+  <p>Notes:
     <%= @session.notes %>
   </p>
 </article>

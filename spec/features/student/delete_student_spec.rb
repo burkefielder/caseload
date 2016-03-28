@@ -7,6 +7,7 @@ describe 'Deleting a student' do
 
     visit student_path(student)
 
+    click_link 'Edit'
     click_link 'Delete Student'
 
     expect(current_path).to eq(students_path)

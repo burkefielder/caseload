@@ -8,7 +8,7 @@ describe 'Navigating sessions' do
 
     visit student_session_url(student, session)
 
-    click_link 'Cancel'
+    click_link 'Notes'
 
     expect(current_path).to eq(student_sessions_path(session))
   end
@@ -18,7 +18,7 @@ describe 'Navigating sessions' do
     session = student.sessions.create(session_attributes)
     visit student_sessions_url(student, session)
 
-    click_link session.date
+    click_link 'View Note'
 
     expect(current_path).to eq(student_session_path(student, session))
   end

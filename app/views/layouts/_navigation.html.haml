@@ -6,10 +6,10 @@
       %i.fi-clipboard-notes
       CASELOAD
     %ul.inline-list
-      %li.active
-        = link_to 'All Students', root_path
       %li
-        = link_to 'Add Student', new_student_path
+        = nav_link 'All Students', root_path
+      %li
+        = nav_link 'Add Student', new_student_path
     %ul.inline-list.hide-for-small-only.account-action
       %li
         %a{"data-reveal-id" => "myModal", :href => "#"} Login

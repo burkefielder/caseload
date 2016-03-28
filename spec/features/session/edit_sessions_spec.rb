@@ -7,6 +7,7 @@ describe 'Editing an individual note' do
 
     visit student_sessions_url(session)
 
+    click_link 'View Note'
     click_link 'Edit'
 
     expect(current_path).to eq(edit_student_session_path(student, session))
@@ -21,6 +22,7 @@ describe 'Editing an individual note' do
 
     visit student_sessions_url(session)
 
+    click_link 'View Note'
     click_link 'Edit'
 
     fill_in 'Notes', with: 'I am changing the note.'
@@ -37,6 +39,7 @@ describe 'Editing an individual note' do
 
     visit student_sessions_url(session)
 
+    click_link 'View Note'
     click_link 'Edit'
 
     fill_in 'Date', with: ''

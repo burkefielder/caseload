@@ -11,8 +11,8 @@ describe 'Viewing a list of session notes' do
 
     visit student_sessions_url(student1)
 
-    expect(page).to have_text(note1.date)
-    expect(page).to have_text(note2.date)
+    expect(page).to have_text(note1.date.strftime('%F'))
+    expect(page).to have_text(note2.date.strftime('%F'))
     expect(page).not_to have_text(note3.date)
   end
 end

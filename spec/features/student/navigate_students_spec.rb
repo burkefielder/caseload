@@ -7,16 +7,16 @@ describe 'Navigating students' do
 
     visit student_url(student)
 
-    click_link 'All students'
+    click_link 'All Students'
 
-    expect(current_path).to eq(students_path)
+    expect(current_path).to eq(root_path)
   end
 
   it 'allows navigation from the listing page to the detail page' do
     student = Student.create(student_attributes)
     visit students_url
 
-    click_link student.first_name
+    click_link 'Show Student'
 
     expect(current_path).to eq(student_path(student))
   end
