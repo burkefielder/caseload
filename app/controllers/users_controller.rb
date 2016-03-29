@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, notice: 'Update successful'
     else
-      render edit
+      render :edit
     end
   end
 
