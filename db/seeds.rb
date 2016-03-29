@@ -7,6 +7,7 @@ Student.create!(
       iep_date: '2015-11-01',
       min_hours: '1550',
       age: '2009-01-01',
+      grade: '3',
       diagnosis: 'social language',
       dismissed: false
     },
@@ -17,6 +18,7 @@ Student.create!(
       iep_date: '2016-01-25',
       min_hours: '500',
       age: '2006-01-01',
+      grade: '7',
       diagnosis: 'artic',
       dismissed: false
     },
@@ -27,6 +29,7 @@ Student.create!(
       iep_date: '2016-03-27',
       min_hours: '10',
       age: '2000-01-01',
+      grade: 'K',
       diagnosis: 'artic',
       dismissed: true
     }
