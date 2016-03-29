@@ -20,20 +20,20 @@
       .large-6.columns.auth-plain
         .signup-panel.left-solid
           %p.welcome Registered Users
-          %form
+          = form_tag(s_session_path) do
             .row.collapse
               .small-2.columns
                 %span.prefix
                   %i.fi-torso-female
               .small-10.columns
-                %input{:placeholder => "username", :type => "text"}
+                = text_field_tag :email, nil
             .row.collapse
               .small-2.columns
                 %span.prefix
                   %i.fi-lock
               .small-10.columns
-                %input{:placeholder => "password", :type => "text"}
-          %a.button{:href => "#"} Log In
+                = password_field_tag :password, nil
+            = submit_tag 'Login', class: 'button'
       .large-6.columns.auth-plain
         .signup-panel.newusers
           %p.welcome New User?
