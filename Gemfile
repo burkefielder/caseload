@@ -15,7 +15,6 @@ gem 'jquery-datatables-rails'
 gem 'momentjs-rails'
 gem 'underscore-rails'
 gem 'dotenv'
-gem 'pg'
 gem 'unicorn'
 gem 'honeybadger'
 gem 'newrelic_rpm'
@@ -35,6 +34,10 @@ gem 'foundation-rails', '~> 5.5'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
