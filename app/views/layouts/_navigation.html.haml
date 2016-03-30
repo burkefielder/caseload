@@ -12,6 +12,8 @@
     %ul.inline-list.hide-for-small-only.account-action
       - if current_user
         = nav_link current_user.name, current_user
+        = nav_link 'Account Settings', edit_user_path(current_user)
+        = link_to 'Sign Out', s_session_path, method: :delete
       - else
         %li
           %a{"data-reveal-id" => "myModal", :href => "#"} Login
