@@ -31,6 +31,7 @@ gem 'axlsx_rails'
 gem 'sequel'
 gem 'tiny_tds', '~> 0.7.0'
 gem 'foundation-rails', '~> 5.5'
+gem 'bcrypt-ruby', '~> 3.1.2'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
