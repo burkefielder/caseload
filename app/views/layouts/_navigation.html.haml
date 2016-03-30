@@ -10,8 +10,11 @@
       %li
         = nav_link 'Add Student', new_student_path
     %ul.inline-list.hide-for-small-only.account-action
-      %li
-        %a{"data-reveal-id" => "myModal", :href => "#"} Login
+      - if current_user
+        = nav_link current_user.name, current_user
+      - else
+        %li
+          %a{"data-reveal-id" => "myModal", :href => "#"} Login
     %a.account.hide-for-medium-up{"data-reveal-id" => "myModal", :href => "#"}
       %i.fi-unlock
   / modal content
