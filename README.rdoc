@@ -7,4 +7,8 @@ The goal is to have the following features and functions:
 * A list of therapy notes for each student
 * A way to track IEP dates and service hours
 
+{<img src="https://codeclimate.com/github/burkefielder/caseload/badges/gpa.svg" />}[https://codeclimate.com/github/burkefielder/caseload]
+
+{<img src="https://codeclimate.com/github/burkefielder/caseload/badges/coverage.svg" />}[https://codeclimate.com/github/burkefielder/caseload/coverage]
+
 * The project is under construction and changing constantly. Check back often for updates.
