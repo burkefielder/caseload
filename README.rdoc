@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple app designed to help speech pathologists keep track of their caseloads.
 
-Things you may want to cover:
+The goal is to have the following features and functions:
+-- A list of students and their demographic information
+-- A list of therapy notes for each student
+-- A way to track IEP dates and service hours
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The project is under construction and changing constantly. Check back often for updates.
