@@ -3,8 +3,8 @@
 This is a simple app designed to help speech pathologists keep track of their caseloads.
 
 The goal is to have the following features and functions:
--- A list of students and their demographic information
--- A list of therapy notes for each student
--- A way to track IEP dates and service hours
+* A list of students and their demographic information
+* A list of therapy notes for each student
+* A way to track IEP dates and service hours
 
-The project is under construction and changing constantly. Check back often for updates.
+* The project is under construction and changing constantly. Check back often for updates.
